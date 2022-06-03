@@ -60,13 +60,13 @@
         -$> docker ps -a
         (Will list all the possible process containers -  the "-a" means all - not only those running )
         -$> docker create --name core-counter counter-image
-### 3.1 Run the Container ###
+### 3.2 Run the Container ###
     - @ the command line enter
         -$> docker start core-counter
         -$> docker attach --sig-proxy=false core-counter
         (Attach to the container - the --sig-proxy-false just means that Keystrokes at the OS level such  Ctrl+c will be ignored while running)
 ## 4 Container Basics ##
-    - @ the command line enter
+    - @ the command line enter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
         -$> docker start core-counter
         (starts a container called "core-counter")
         -$> docker stop core-counter
