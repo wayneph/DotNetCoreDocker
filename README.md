@@ -20,7 +20,7 @@
 ### 1.1 DOT NET CORE ###
     - Install the linux DOT NET CORE SDK (v6.0.300 here) (I suggest the MANUAL installation)
     https://docs.microsoft.com/en-gb/dotnet/core/install/linux-scripted-manual#manual-install
-### 1.2 Crate DOT NET CORE app ###
+### 1.2 Create DOT NET CORE app ###
     - I strongly suggest creating this manually since it creates the C# coding environment for you.
     - I.e. -- Do not just download this code repo
 ### 1.3 MANUAL CREATION OF PROJECT ###
@@ -38,7 +38,7 @@
             - re-run & it should output a counted app.  (This is important for seeing running containers)
         - For a Docker image, it must FIRST be published. To publish the app, run the following command:
             - dotnet publish -c Release
-## 2. Create & name Docker Image and Crate & name the Container  ##
+## 2. Create & name Docker Image and Create & name the Container  ##
 ### 2.1 Create Dockerfile ###
     -  When building the image it does od of a manifest.  Docker looks for & must find a file :: Dockerfile in the root of the App.
     -  Crate the file as per this repo Dockerfile
@@ -55,10 +55,16 @@
 ## 3 Create the Container off the image ##
 ### 3.1 Create the container ###
     - @ the command line enter
+        -$> docker create --name core-counter counter-image
+        (Will create a container called "core-counter" off the image "counter-image")
         -$> docker ps -a
         (Will list all the possible process containers -  the "-a" means all - not only those running )
         -$> docker create --name core-counter counter-image
-        (Will create a container called "core-counter" off the image "counter-image")
+### 3.1 Run the Container ###
+    - @ the command line enter
+        -$> docker start core-counter
+        -$> docker attach --sig-proxy=false core-counter
+        (Attach to the container - the --sig-proxy-false just means that Keystrokes at the OS level such  Ctrl+c will be ignored while running)
 ## 4 Container Basics ##
     - @ the command line enter
         -$> docker start core-counter
