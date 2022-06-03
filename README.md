@@ -66,7 +66,7 @@
         -$> docker attach --sig-proxy=false core-counter
         (Attach to the container - the --sig-proxy-false just means that Keystrokes at the OS level such  Ctrl+c will be ignored while running)
 ## 4 Container Basics ##
-    - @ the command line enter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
+    - @ the command line enter
         -$> docker start core-counter
         (starts a container called "core-counter")
         -$> docker stop core-counter
